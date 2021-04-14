@@ -1,0 +1,11 @@
+{% include 'base.html' %}
+{% block body %}
+	<nav class=" navbar navbar-default shadow-sm" style="background-color: black" >
+		<a class="nav-link" href="{% url 'index' %}" style="color: #fff">Home</a>
+		<a class="nav-link" href="{% url 'my-bikes' %}" style="color: #fff">My Bikes</a>
+		<a class="nav-link" href="{% url 'vendor-profile' %}" style="color: #fff">My Profile</a>
+	  <a class="nav-link" href="{% url 'logout' %}" style="color: #fff;background-color: red;margin-right: 5px">Logout</a>
+    </nav>
+{% block content %}
+{% endblock %}
+{% endblock %}

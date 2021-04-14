@@ -1,0 +1,36 @@
+{% include 'index.html' %}
+{% block content %}
+<div>
+	<center>
+		<div>
+				<table class="table table-striped mt-5 shadow-sm" style="border-collapse:collapse; table-layout:fixed; width: 80%">
+					<thead>
+						<tr>
+							<th style="background-color: blue;color: #fff">Ride Id</th>
+							<th style="background-color: blue;color: #fff">Customer Name</th>
+							<th style="background-color: blue;color: #fff">Mobile</th>
+							<th style="background-color: blue;color: #fff">Ride Status</th>
+							<th style="background-color: blue;color: #fff">Start Date</th>
+							<th style="background-color: blue;color: #fff">End Date</th>
+
+
+						</tr>
+					</thead>
+					<tbody>
+						{% for ls in ls %}
+							<tr>
+								<th>{{ ls.ride_id }}</th>
+								<th>{{ ls.customer }}</th>
+								<th>{{ ls.bike }}</th>
+								<th>{{ ls.ride_status }}</th>
+								<th>{{ ls.start_date }}</th>
+								<th>{{ ls.end_date }}</th>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+		
+		</div>
+	</center>
+</div>
+{% endblock %}

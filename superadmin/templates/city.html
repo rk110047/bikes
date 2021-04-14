@@ -1,0 +1,27 @@
+{% include 'index.html' %}
+{% block content %}
+<div>
+	<a class='nav-link' href="{% url 'create-city' %}" style="color: #fff;background-color:orange;width:250px;margin:20px;font-size:25px;border-radius:400px;font-style:italic"> + Create City<a>
+	<center>
+		<div>
+				<table class="table table-striped mt-5 shadow-sm" style="border-collapse:collapse; table-layout:fixed; width: 80%">
+					<thead>
+						<tr>
+							<th style="background-color: blue;color: #fff">City Name</th>
+							<th style="background-color: blue;color: #fff">Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for ls in ls %}
+							<tr>
+								<th>{{ ls.name }}</th>
+								<th><a href="#">delete</a></th>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+		
+		</div>
+	</center>
+</div>
+{% endblock %}

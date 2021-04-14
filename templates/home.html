@@ -1,0 +1,17 @@
+{% include 'index.html' %}
+{% block content %}
+	<div style="display:flex;flex-direction: row;">
+		<div class="shadow-sm" style="background-color: green;margin: 50px;padding:20px;align-items: center;display: flex;justify-content: center;">
+			<a href="{% url 'ongoing-bookings' %}"><h1 style="color: #fff">Ongoing Bookings</h1></a>
+		</div>
+		<div class="shadow-sm" style="background-color: blue;margin: 50px;padding:20px;align-items: center;display: flex;justify-content: center;">
+			<a href="{% url 'upcoming-bookings' %}"><h1 style="color: #fff">Upcoming Bookings</h1></a>
+		</div>
+		<div class="shadow-sm" style="background-color: black;margin: 50px;padding:20px;align-items: center;display: flex;justify-content: center;">
+			<a href="{% url 'completed-bookings' %}"><h1 style="color: #fff">Past Bookings</h1></a>
+		</div>
+		<div class="shadow-sm" style="background-color: red;margin: 50px;padding:20px;align-items: center;display: flex;justify-content: center;">
+			<a href="{% url 'canceled-bookings' %}"><h1 style="color: #fff">Canceled bookings</h1></a>
+		</div>
+	</div>
+{% endblock %}

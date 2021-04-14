@@ -1,0 +1,30 @@
+{% include 'index.html' %}
+{% block content %}
+<div>
+	<a class='nav-link' href="{% url 'vendor-profile-create' %}" style="color: #fff;background-color:orange;width:250px;margin:20px;font-size:25px;border-radius:400px;font-style:italic"> + Add New Vendor<a>
+	<center>
+		<div>
+				<table class="table table-striped mt-5 shadow-sm" style="border-collapse:collapse; table-layout:fixed; width: 80%">
+					<thead>
+						<tr>
+							<th style="background-color: blue;color: #fff">Vendor Name</th>
+							<th style="background-color: blue;color: #fff">Mobile</th>
+							<th style="background-color: blue;color: #fff">Whatsapp Number</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						{% for ls in ls %}
+							<tr>
+								<th>{{ ls.name }}</th>
+								<th>{{ ls.mobile }}</th>
+								<th>{{ ls.whatsapp_number }}</th>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+		
+		</div>
+	</center>
+</div>
+{% endblock %}

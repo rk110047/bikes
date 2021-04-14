@@ -1,0 +1,11 @@
+{% include 'index2.html' %}
+{% block content %}
+<center>
+		<form class="form" action="." method="POST" style="display:flex;flex-direction: column;margin: 10px 0;padding: 7px;width: 1000px;border: solid 1px;margin-bottom: 20px" enctype="multipart/form-data">
+			{% csrf_token %}
+			<p>Edit Bike Details:</p>
+			{{form}}
+			<button type="submit" style="background-color: orange;color: #fff;margin-top:20px">EDIT</button>
+		</form>
+</center>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% include 'index2.html' %}
+{% block content %}
+<center>
+	<form class='shadow-sm' style="display:flex;flex-direction: column;margin: 10px 0;padding: 7px;width: 600px;border: solid 1px;margin-bottom: 20px" action="." method="POST">
+		{% csrf_token %}
+		{{ form }}
+		<button type="submit" style="background-color: blue;margin-top: 10px;color: #fff"> EDIT </button>
+	</form>
+</center>
+{% endblock %}
