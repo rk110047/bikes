@@ -2,8 +2,27 @@ from django.shortcuts import render
 from .models import State,City,BikeCompany,BikeModel
 from django.contrib.auth.decorators import login_required
 from .forms import StateForm,CityForm,BikeComapnyForm,BikeModelForm
-
+from .serializer import StateSerializer,CitySerializer,BikeCompanySerializer,BikeModelSerializer
+from rest_framework import generics
 # Create your views here.
+
+
+class StateListAPIView(generics.ListAPIView):
+	serializer_class 		=		StateSerializer
+	queryset				=		State.objects.all()
+
+
+class CityListAPIView(generics.ListAPIView):
+	serializer_class 		=		CitySerializer
+	queryset				=		City.objects.all()
+
+class BikeCompanyListAPIView(generics.ListAPIView):
+	serializer_class 		=		BikeCompanySerializer
+	queryset				=		BikeCompany.objects.all()
+
+class BikeModelListAPIView(generics.ListAPIView):
+	serializer_class 		=		BikeModelSerializer
+	queryset				=		BikeModel.objects.all()
 
 @login_required(login_url="login")
 def state_create(request):
